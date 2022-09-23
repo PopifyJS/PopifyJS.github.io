@@ -80,6 +80,7 @@ body {
 
 .popify-btn {
   background-color: rgb(139, 195, 248);
+  color: black;
   padding: .5em 1.25em;
   border: solid 2px transparent;
   cursor: pointer;
