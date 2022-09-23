@@ -10,6 +10,11 @@ body {
   font-family: system-ui;
 }
 
+::selection {
+  background-color: #15d2f8;
+  color: black;
+}
+
 .flex {
   position: absolute;
   top: 2rem;
@@ -27,6 +32,17 @@ body {
 button.run {
   padding: .5em 1.25em;
   background-color: rgb(107, 220, 164);
+  color: black;
+  border: solid 1px transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: .2rem;
+}
+
+button.docs {
+  padding: .5em 1.25em;
+  background-color: rgb(79, 90, 100);
+  color: white;
   border: solid 1px transparent;
   font-size: 1.3rem;
   cursor: pointer;
@@ -124,4 +140,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-} 
+}
+
+@media (max-width: 419px) {
+
+  .option, .detail, .option *, .detail * {
+    font-size: 1.1rem;
+  }
+
+}

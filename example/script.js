@@ -28,10 +28,14 @@ runButton.addEventListener("click", () => {
       {
         text: btn2value.value,
         closePopup: btn2closeBg.checked,
-        class: 'lolsz'
-      }
+      },
     ],
     closeOnBackground: backgroundInput.checked
   });
 
-})
+});
+
+const gitBtn = document.querySelector(".docs");
+gitBtn.addEventListener("click", () => {
+  window.location.href = "https://github.com/PopifyJS/PopifyJS.github.io/";
+});
