@@ -28,12 +28,6 @@ function popify(options) {
     mainPop.classList.add("overlay-none");
   }
 
-  if(options.backgroundClickable == true) {
-    mainPop.classList.add("background-clickable");
-  } else {
-    // do nothing.
-  }
-
   
     // header HTML 
     if (options.headerContent) {
@@ -104,9 +98,11 @@ function popify(options) {
     document.body.append(mainPop);
 
     if(options.closeOnBackground == true) {
-      mainPop.addEventListener("click", () => {
-        mainPop.remove();
-      })
+      mainPop.addEventListener("click", (e) => {
+        if(e.target.classList.contains("popify-main")) {
+          mainPop.remove();
+        }
+      });
     } else {
       // do nothing.
     }
