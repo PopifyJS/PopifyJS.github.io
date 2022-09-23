@@ -2,14 +2,17 @@
 a minimal javascript library for confirm popups or any use popups
 
 *popify playground default settings*
-<img width="957" alt="example-png" src="https://user-images.githubusercontent.com/89910163/191961502-c751a4dd-1f66-4b80-8431-ab761e44e787.png">
+<img width="960" src="https://user-images.githubusercontent.com/89910163/192030336-1641c26b-c37d-4f02-a86e-56a08a1cea62.png">
+
+
 <br>
 <br>
 The gray background is the overlay, enabled by default. It can be disabled anytime. <br>
 All the content in the popup is fully customizable, the header, the sub text, the buttons, the close icon, and many more accessibility features.
 <br><br>
-The popup's size is responsive and can be changed to large mode, making it cover almost the full screen.
-<img width="953" alt="example-png2" src="https://user-images.githubusercontent.com/89910163/191961985-db84753d-a2fe-4218-b31f-959f48d69904.png">
+The popup's size is responsive and can be changed to large mode, making it cover almost the full screen. <br>
+<img width="960" src="https://user-images.githubusercontent.com/89910163/192030196-de8dfe6b-21c4-4a44-9fc7-b38f015e977b.png">
+
 
 
 
