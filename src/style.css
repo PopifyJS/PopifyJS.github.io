@@ -1,0 +1,89 @@
+/*
+ Github: https://github.com/chill31/popifyJS/README.md
+ Source Code [SRC / Styles]
+*/
+
+body {
+  margin: 0;
+  font-family: system-ui;
+}
+
+.popify-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #aaa;
+  height: 100%;
+  width: 100%;
+}
+
+.popify-main.overlay-none {
+  background: none;
+}
+
+.popify-app {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 80vh;
+  width: 95vw;
+  overflow: hidden;
+}
+
+.popify-main.short .popify-app {
+  min-height: 18rem;
+  height: 20rem;
+  max-height: 90vh;
+  min-width: 23rem;
+  width: 30vw;
+  max-width: 95vw;
+}
+
+.popify-close {
+  height: 1.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+.popify-header {
+  font-size: 1.7rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  color: black;
+  min-width: max-content;
+}
+
+.popify-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+}
+
+.popify-btn-group {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.popify-btn {
+  background: rgb(139, 195, 248);
+  padding: .5em 1.25em;
+  border: solid 2px transparent;
+  cursor: pointer;
+  border-radius: .2rem;
+  transition: background 250ms ease;
+}
+
+.popify-btn:where(:hover, :focus) {
+  background: rgb(67, 167, 255);
+  outline: none !important;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PopifyJS Playground</title>
+
+  <link rel="stylesheet" href="/example/style.css">
+
+  <link rel="stylesheet" href="/src/style.css">
+  <script src="/src/script.js"></script>
+</head>
+
+<body>
+
+  <div class="flex">
+
+    <button class="run">Run PopifyJS</button>
+
+    <div class="option">
+      <span class="text">Header</span>
+      <input type="text" class="value header" placeholder="type here..." value="Header Value">
+    </div>
+
+    <div class="option">
+      <span class="text">Sub Text</span>
+      <input type="text" class="value sub-text" placeholder="type here..." value="Sub Text Value">
+    </div>
+
+    <div class="option">
+      <span class="text">Overlay</span>
+      <label class="switch">
+        <input type="checkbox" class="overlay" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="option">
+      <span class="text">Close Icon</span>
+      <label class="switch">
+        <input type="checkbox" class="close-icon" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="option">
+      <span class="text">Short Size</span>
+      <label class="switch">
+        <input type="checkbox" class="short-size" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="option">
+      <span class="text">Close on Background Click</span>
+      <label class="switch">
+        <input type="checkbox" class="close-background" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <details class="detail">
+      <summary class="summary">Button 1</summary>
+
+      <div class="option">
+        <span class="text">Button 1 Text</span>
+        <input type="text" class="value btn1" placeholder="type here...." value="button 1 text">
+      </div>
+
+      <div class="option">
+        <span class="text">Close on Click</span>
+
+        <label class="switch">
+          <input type="checkbox" class="btn1-closebg" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </details>
+
+    <details class="detail">
+      <summary class="summary">Button 2</summary>
+
+      <div class="option">
+        <span class="text">Button 2 Text</span>
+        <input type="text" class="value btn2" placeholder="type here...." value="button 2 text">
+      </div>
+
+      <div class="option">
+        <span class="text">Close on Click</span>
+
+        <label class="switch">
+          <input type="checkbox" class="btn2-closebg" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </details>
+  </div>
+
+  <script src="/example/script.js"></script>
+</body>
+</html>
