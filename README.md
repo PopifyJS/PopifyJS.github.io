@@ -97,7 +97,7 @@ Animations, as of now, are not available when the popup is opened or closed beca
 
 ## Customizing:
 
-PopifyJS uses a simple class naming system, so it is very easy to recognize and customize various elements in the library itself. <br>
+PopifyJS uses a simple class naming system, so it is very easy to recognize and customize various elements in the library itself. Every class name starts with `popify-` and ends with the element type/name<br>
 For example, changing the overlay background color:
 
 ```css
@@ -105,6 +105,25 @@ For example, changing the overlay background color:
   background: red; /* changes the background color of the overlay */
 }
 ```
+
+<br>
+
+All Class names are:
+<br><br>
+`popify-main`: this is the main container for everything. Also used as an overlay if enabled.
+ - `short`: this is given when the "short" parameter is set to true.
+ - `overlay-none`: this class name is added when the "overlay" option is disabled. <br>
+ 
+`popify-app`: this is given to the popup which contains all the content like the header, sub text, etc. <br>
+`popify-close`: given to the close icon, if enabled. <br>
+`popify-header`: given to the title in the popup, if any. <br>
+`popify-subtext`: given to the subtext in the popup. <br>
+`popify-btn-group`: given to the container of all the buttons in the popup. <br>
+`popify-btn`: given to any button in the popup. <br>
+ - `close-popup-btn`: given to the buttons which are supposed to the close the popup on click.
+ - `[custom class]`: given if a "class" property is provided in the popify initializer. <br>
+ 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 <br>
 
