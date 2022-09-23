@@ -107,4 +107,3 @@ just link the required resources [script & link] to your html page and you're do
 <script src="https://raw.githubusercontent.com/chill31/popifyJS/main/src/script.js"></script>
 ```
 or just download the files and customize it as you like.
-```
