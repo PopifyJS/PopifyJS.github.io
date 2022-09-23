@@ -18,7 +18,7 @@ body {
 }
 
 .popify-main.overlay-none {
-  background-color: none;
+  background-color: transparent;
 }
 
 /* large size */
