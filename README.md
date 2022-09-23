@@ -72,6 +72,8 @@ buttons: [
 `class`: a class you want to give to the button. [String] <br>
 `run`: called on button click [Function] <br>
 
+**For testing PopifyJS online, go to the <a href="https://popifyjs.github.io">PopifyJS Playground</a>**
+
 <br>
 
 ## Some  Disadvantages
@@ -81,12 +83,55 @@ Animations, as of now, are not available when the popup is opened or closed beca
 <br>
 <br>
 
+## Customizing:
+
+PopifyJS uses a simple class naming system, so it is very easy to recognize and customize various elements in the library itself. <br>
+For example, changing the overlay background color:
+
+```css
+.popify-main {
+  background: red; /* changes the background color of the overlay */
+}
+```
+
+<br>
+
+Or, changing one of the button's background color and color:
+<br>
+For this, first you can give a custom class to the specific button you want to customize.
+
+```js
+popify({
+  ...
+  buttons: [,
+    ...,
+    {
+     text: "Delete", // just for reference.
+     class: "delete-something-btn", // for any class you give here, it will add it to the button's 'classList'.
+     run: () => {
+       delete somethingToDelete; // still for reference.
+     }
+    }
+  ]
+});
+```
+now we need to customize it:
+```css
+.delete-something-btn {
+  background: #FB5B5B; /* red color */
+  color: white;
+}
+```
+
+<br>
+<br>
+
 ## How do I use It?
 just link the required resources [script & link] to your html page and you're done.
 
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/chill31/popifyJS/main/src/style.css">
-<script src="https://raw.githubusercontent.com/chill31/popifyJS/main/src/script.js"></script>
+<link rel="stylesheet" href="https://popifyjs.github.io/src/style.css">
+<script src="https://popifyjs.github.io/src/script.js"></script>
 ```
 or just download the files and customize it as you like.
 
