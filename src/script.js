@@ -3,11 +3,8 @@
  Source Code [SRC / Scripts]
 */
 
-let popCount = -1;
-
 function popify(options) {
-  popCount++;
-
+  
   let popifyHeader = ` `;
   let popifyBtns = ` `;
   let popifySubText = ` `;
@@ -107,10 +104,14 @@ function popify(options) {
       // do nothing.
     }
 
-    document.querySelectorAll(".popify-close")[popCount]?.addEventListener("click", (e) => {
-      popCount = popCount - 1;
-      e.target.parentElement.parentElement.remove();
-    });
+    const closeIcon = mainPop.querySelector(".popify-close");
+    if(!closeIcon) {
+
+    } else {
+      closeIcon.addEventListener("click", () => {
+        mainPop.remove();
+      })
+    }
 
     document.querySelectorAll(".popify-btn").forEach((btn, index) => {
 
