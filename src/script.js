@@ -3,8 +3,13 @@
  Source Code [SRC / Scripts]
 */
 
+document.head.innerHTML += `
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+`
+
 function popify(options) {
   
+  let popifyIcon = ` `;
   let popifyHeader = ` `;
   let popifyBtns = ` `;
   let popifySubText = ` `;
@@ -25,6 +30,44 @@ function popify(options) {
     mainPop.classList.add("overlay-none");
   }
 
+    const iconOptions = [
+      {
+        name: 'success',
+        code: 'bi-check-circle',
+      },
+      {
+        name: 'error',
+        code: 'bi-x-circle',
+      },
+      {
+        name: 'warning',
+        code: 'bi-exclamation-circle',
+      },
+      {
+        name: 'info',
+        code: 'bi-info-circle',
+      },
+      {
+        name: 'question',
+        code: 'bi-question-circle',
+      }
+    ];
+
+    if(options.icon) {
+    iconOptions.forEach((option) => {
+
+      if(options.icon == option.name) {
+        mainPop.classList.add("icon-visible");
+        popifyIcon = `
+          <i class="${option.code} popify-icon icon-${option.name}"></i>
+        `;
+      } else {
+
+      }
+
+    });
+  }
+    
   
     // header HTML 
     if (options.headerContent) {
@@ -52,12 +95,14 @@ function popify(options) {
         if(btn.closePopup == true) {
           popifyBtns += `
             <button class="${btn.class} popify-btn close-popup-btn">
+              <i class="bi-${btn.icon.replaceAll(" ", "-")}"></i>
               ${btn.text}
             </button>
           `;
         } else {
           popifyBtns += `
             <button class="${btn.class} popify-btn">
+              <i class="bi-${btn.icon.replaceAll(" ", "-")}"></i>
               ${btn.text}
             </button>
           `;
@@ -82,6 +127,8 @@ function popify(options) {
     mainPop.innerHTML = `
     <div class="popify-app">
      ${popifyCloseIcon}
+
+     ${popifyIcon}
 
      ${popifyHeader}
      ${popifySubText}
@@ -118,7 +165,7 @@ function popify(options) {
       btn.addEventListener("click", (e) => {
 
         if(btn.classList.contains("close-popup-btn")) {
-          e.target.parentElement.parentElement.parentElement.remove();
+          mainPop.remove();
           if(options.buttons[index].run) {
             options.buttons[index].run();
           }

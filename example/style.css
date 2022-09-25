@@ -60,6 +60,10 @@ button.docs {
   align-items: center;
 }
 
+.select {
+  font-size: 1.3rem;
+}
+
 .detail {
   background-color: rgb(73, 80, 101);
   padding: 1rem;
@@ -69,6 +73,10 @@ button.docs {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.summary {
+  cursor: pointer;
 }
 
 .value {

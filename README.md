@@ -29,51 +29,56 @@ popifyJS is a library made for responsive popups with total customizability. Man
 ```js
 
 popify({
-  overlay: true, // defines if you want an overlay or not.
-  headerContent: "Confirm", // header text.
-  subText: "Are you sure you want to save this work?", // sub text
-  closeIcon: true, // if true, shows a little icon on the top which can be used to close the popup.
-  short: true, // this can be false, if you want the popup to be large.
-  buttons: [ // an array with buttons, preferred is 3, because then it will become a problem for mobile devices.
+  overlay: true, // specifies overlay visibility.
+  closeOnBackground: true, // specifies if the popup needs to close when the background/overlay is clicked.
+  short: true, // specifies popup size to be short or not.
+  icon: "info", // specifices icon of the popup.
+  closeIcon: true, // specifies if there needs to be a close icon or not.
+  headerContent: "Confirm Delete", // specifies header content.
+  subText: "Are you sure you want to delete this file?", // specifies sub text. HTML can be inserted.
+  
+  buttons: [ // an array of buttons you want in the popup. Scroll down for details on button properties. 
     {
-      text: "Cancel", // button text
-      closePopup: true, // closes the popup on click if true.
-      class: 'btn-cancel', // custom class you want to give to the button.
-      run: () => { // click function
-        console.log("ran first button");
-      },
+      text: "Cancel",
+      class: "btn-cancel",
+      closePopup: true,
+      icon: "x",
+      run: () => {
+        console.log("Cancel button clicked");
+      }
     },
     {
-      text: "Save", // button text
-      closePopup: false, // closes the popup on click if true.
-      class: 'btn-save', // custom class you want to give to the button.
-      run: () => { // click function
-        console.log("ran second button")
-      },
+      text: "Delete",
+      class: "btn-delete",
+      closePopup: true,
+      icon: "trash"
+      run: () => {
+        console.log("Delete button clicked");
+      }
     }
-  ],
-  closeOnBackground: true, // if true, closes when the background is clicked.
+  ]
 });
 
 ```
 
 No option is necessary, the color options all have defaults so if they aren't passed as parameters, they will be moved on to default color scheme.
 
-`overlay`: Defines if overlay should be present or not. [Boolean] <br>
-`headerContent`: Defines header text. If none, header will be removed. [String] <br>
-`subText`: Defines sub text content, if none, sub text will be removed. [String] <br>
-`closeIcon`: Specifies if there should be a close icon or not. [Boolean] <br>
-`short`: Defines popup is short or not. [Boolean] <br>
-`buttons`: an array of buttons. Preferred is 3 or less. [Array] <br>
-`closeOnBackground`: closes the popup if the background content or overlay is clicked. [Boolean] <br> 
+`overlay`: specifies if you want a background behind the popup or not. [Boolean] <br>
+`closeOnBackground`: specifies if you want the popup to close when the overlay or background is clicked. [Boolean] <br>
+`short`: specifies if you want the popup size to be short or not. [Boolean] <br>
+`icon`: specifies icon for the popup. "success", "error", "warning", "question", "info" are all the available icons. [String] <br>
+`closeIcon`: specifies if you want a close icon in the popup or not. [Boolean] <br>
+`headerContent`: specifies header content. [String] <br>
+`subText`: specifies sub text. HTML can be inserted. [String] [HTML] <br>
 <br>
 
 `buttons` / `[Object]` : 
 ```js
 buttons: [
   {
-    text: "Cancel",
-    closePopup: true,
+    text: "Cancel", // button text.
+    closePopup: true, // specifies if the popup is to be closed on button click or not.
+    icon: '', // any icon available on bootstrap icons work.
     class: '', // custom class you want to give to the button.
     run: () => {
       // this function is called when the button is clicked.
@@ -85,9 +90,11 @@ buttons: [
 `text`: Defines button text [String] <br>
 `closePopup`: specifies if the popup is to be closed on click or not. [Boolean] <br>
 `class`: a class you want to give to the button. [String] <br>
+`icon`: any bootstrap icon. [String] <br>
 `run`: called on button click [Function] <br>
 
 **For testing PopifyJS online, go to the <a href="https://popifyjs.github.io">PopifyJS Playground</a>**
+**For seeing all the available button icons, go to <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>**
 
 <br>
 
@@ -174,3 +181,8 @@ or just download the files and customize it as you like.
 
 ## Contributing:
 You can modify the code with new features or fixing a bug and post it as a pull request with given information. The request will be checked and merged if it's good.
+
+
+## Dependencies:
+
+There are no heavy dependencies which slow down your website or page, but bootstrap icons will be loaded in order to provide icons to the popup and buttons.
