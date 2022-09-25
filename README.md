@@ -2,7 +2,8 @@
 a minimal javascript library for confirm popups or any use popups
 
 *popify playground default settings*
-<img width="960" src="https://user-images.githubusercontent.com/89910163/192030336-1641c26b-c37d-4f02-a86e-56a08a1cea62.png">
+<img width="960" src="https://user-images.githubusercontent.com/89910163/192141571-0baad986-7068-493a-9817-e9141a835a80.png">
+
 
 
 <br>
@@ -11,9 +12,7 @@ The gray background is the overlay, enabled by default. It can be disabled anyti
 All the content in the popup is fully customizable, the header, the sub text, the buttons, the close icon, and many more accessibility features.
 <br><br>
 The popup's size is responsive and can be changed to large mode, making it cover almost the full screen. <br>
-<img width="960" src="https://user-images.githubusercontent.com/89910163/192030196-de8dfe6b-21c4-4a44-9fc7-b38f015e977b.png">
-
-
+<img width="960" src="https://user-images.githubusercontent.com/89910163/192141590-104bfa8d-4fde-4172-b27a-807f4fd1f055.png">
 
 
 <br>
@@ -93,7 +92,7 @@ buttons: [
 `icon`: any bootstrap icon. [String] <br>
 `run`: called on button click [Function] <br>
 
-**For testing PopifyJS online, go to the <a href="https://popifyjs.github.io">PopifyJS Playground</a>**
+**For testing PopifyJS online, go to the <a href="https://popifyjs.github.io">PopifyJS Playground</a>** <br>
 **For seeing all the available button icons, go to <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>**
 
 <br>
