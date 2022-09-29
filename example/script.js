@@ -5,6 +5,7 @@ const overlayInput = document.querySelector(".overlay");
 const shortSizeInput = document.querySelector(".short-size");
 const backgroundInput = document.querySelector(".close-background");
 const closeIconInput = document.querySelector(".close-icon");
+const closeEscapeInput = document.querySelector(".close-escape");
 const iconInput = document.querySelector(".select-icon");
 
 const btn1value = document.querySelector(".value.btn1");
@@ -36,7 +37,8 @@ runButton.addEventListener("click", () => {
         icon: btn2icon.value
       },
     ],
-    closeOnBackground: backgroundInput.checked
+    closeOnBackground: backgroundInput.checked,
+    closeOnEscape: closeEscapeInput.checked,
   });
 
 });

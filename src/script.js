@@ -179,4 +179,20 @@ function popify(options) {
 
     });
 
+    if(options.closeOnEscape == true) {
+
+      addEventListener("keydown", (e) => {
+
+        if(e.key.toLowerCase() == "escape") {
+          mainPop.remove();
+        } else {
+          return;
+        }
+
+      })
+
+    } else {
+      return;
+    }
+
 }
