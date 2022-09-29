@@ -30,6 +30,7 @@ popifyJS is a library made for responsive popups with total customizability. Man
 popify({
   overlay: true, // specifies overlay visibility.
   closeOnBackground: true, // specifies if the popup needs to close when the background/overlay is clicked.
+  closeOnEscape: true, // closes the popup when "escape" key is pressed.
   short: true, // specifies popup size to be short or not.
   icon: "info", // specifices icon of the popup.
   closeIcon: true, // specifies if there needs to be a close icon or not.
@@ -64,6 +65,7 @@ No option is necessary, the color options all have defaults so if they aren't pa
 
 `overlay`: specifies if you want a background behind the popup or not. [Boolean] <br>
 `closeOnBackground`: specifies if you want the popup to close when the overlay or background is clicked. [Boolean] <br>
+`closeOnEscape`: specifies if the popup is to be closed on "escape" key press or not. [Boolean] <br>
 `short`: specifies if you want the popup size to be short or not. [Boolean] <br>
 `icon`: specifies icon for the popup. "success", "error", "warning", "question", "info" are all the available icons. [String] <br>
 `closeIcon`: specifies if you want a close icon in the popup or not. [Boolean] <br>
