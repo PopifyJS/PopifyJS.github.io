@@ -34,7 +34,7 @@ runButton.addEventListener("click", () => {
       {
         text: btn2value.value,
         closePopup: btn2closeBg.checked,
-        icon: btn2icon.value
+        icon: btn2icon.value,
       },
     ],
     closeOnBackground: backgroundInput.checked,
