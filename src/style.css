@@ -3,11 +3,6 @@
  Source Code [SRC / Styles]
 */
 
-body {
-  margin: 0;
-  font-family: system-ui;
-}
-
 .popify-main {
   position: fixed;
   top: 0;
