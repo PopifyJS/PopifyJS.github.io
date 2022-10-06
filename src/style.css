@@ -99,6 +99,7 @@
 
 .popify-btn {
   background-color: rgb(218, 218, 218);
+  color: black;
   padding: .5em 1.25em;
   border: none;
   cursor: pointer;
@@ -112,6 +113,39 @@
 .popify-btn:where(:hover, :focus) {
   background-color: rgb(230, 230, 230);
   outline: none;
+}
+
+.popify-btn.info {
+  background-color: #85d6ed;
+}
+
+.popify-btn.info:where(:hover, :focus) {
+  background-color: #5cdcff;
+}
+
+.popify-btn.success {
+  background-color: rgb(83, 216, 83);
+}
+
+.popify-btn.success:where(:hover, :focus) {
+  background-color: rgb(123, 232, 123);
+}
+
+.popify-btn.error {
+  background-color: rgb(198, 41, 41);
+  color: white;
+}
+
+.popify-btn.error:where(:hover, :focus) {
+  background-color: rgb(238, 57, 57);
+}
+
+.popify-btn.warning {
+  background-color: rgb(222, 192, 101);
+}
+
+.popify-btn.warning:where(:hover, :focus) {
+  background-color: rgb(227, 180, 37);
 }
 
 .popify-icon.icon-error::before {

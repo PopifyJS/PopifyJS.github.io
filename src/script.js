@@ -94,14 +94,14 @@ function popify(options) {
 
         if(btn.closePopup == true) {
           popifyBtns += `
-            <button class="${btn.class} popify-btn close-popup-btn">
+            <button class="${btn.class} popify-btn close-popup-btn ${btn.type.toLowerCase()}">
               <i class="bi-${btn.icon.replaceAll(" ", "-")}"></i>
               ${btn.text}
             </button>
           `;
         } else {
           popifyBtns += `
-            <button class="${btn.class} popify-btn">
+            <button class="${btn.class} popify-btn ${btn.type.toLowerCase()}">
               <i class="bi-${btn.icon.replaceAll(" ", "-")}"></i>
               ${btn.text}
             </button>

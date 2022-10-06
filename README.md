@@ -40,18 +40,20 @@ popify({
   buttons: [ // an array of buttons you want in the popup. Scroll down for details on button properties. 
     {
       text: "Cancel",
-      class: "btn-cancel",
       closePopup: true,
+      class: "btn-cancel",
       icon: "x",
+      type: 'none',
       run: () => {
         console.log("Cancel button clicked");
       }
     },
     {
       text: "Delete",
-      class: "btn-delete",
       closePopup: true,
-      icon: "trash"
+      class: "btn-delete",
+      icon: "trash",
+      type: 'error',
       run: () => {
         console.log("Delete button clicked");
       }
@@ -81,6 +83,7 @@ buttons: [
     closePopup: true, // specifies if the popup is to be closed on button click or not.
     icon: '', // any icon available on bootstrap icons work.
     class: '', // custom class you want to give to the button.
+    type: '', // type of a button, styles are changed when type is provided. Leave empty or remove the property if not needed.
     run: () => {
       // this function is called when the button is clicked.
     }
@@ -92,6 +95,7 @@ buttons: [
 `closePopup`: specifies if the popup is to be closed on click or not. [Boolean] <br>
 `class`: a class you want to give to the button. [String] <br>
 `icon`: any bootstrap icon. [String] <br>
+`type`: the type of button you want, any of the following: **error**, **success**, **warning**, **info** [String] <br>
 `run`: called on button click [Function] <br>
 
 **For testing PopifyJS online, go to the <a href="https://popifyjs.github.io">PopifyJS Playground</a>** <br>
