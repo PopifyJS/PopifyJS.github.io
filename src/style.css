@@ -7,13 +7,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #aaa;
+  background-color: rgba(170, 170, 170, 0.75);
   height: 100%;
   width: 100%;
 }
 
 .popify-main.overlay-none {
-  background-color: none;
+  background-color: transparent;
 }
 
 /* large size */
