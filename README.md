@@ -133,11 +133,11 @@ All Class names are:
 `popify-close`: given to the close icon, if enabled. <br>
 `popify-header`: given to the title in the popup, if any. <br>
 `popify-subtext`: given to the subtext in the popup. <br>
-`popify-btn-group`: given to the container of all the buttons in the popup. <br>
+`popify-btn-group`: given to the container of all the buttons in the popup. <br><vr>
 `popify-btn`: given to any button in the popup. <br>
- - `close-popup-btn`: given to the buttons which are supposed to the close the popup on click.
+ - `close-popup-btn`: given to the buttons which are supposed to the close the popup on click. <br>
  - `[custom class]`: given if a "class" property is provided in the popify initializer. <br>
- 
+ - `[type-class]`: given if a valid "type" property is given in the popify initializer. <br>
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 <br>
