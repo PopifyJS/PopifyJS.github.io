@@ -60,6 +60,10 @@ button.docs {
   align-items: center;
 }
 
+.option, .detail {
+  border-radius: .2rem;
+}
+
 .select {
   font-size: 1.3rem;
 }
