@@ -161,3 +161,17 @@ input:checked + .slider:before {
   }
 
 }
+
+.docs-quick {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.docs-quick a {
+  color: #15d2f8;
+  text-decoration: none;
+}
+
+.docs-quick a:where(:hover, :focus) {
+  text-decoration: underline;
+}

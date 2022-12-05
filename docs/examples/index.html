@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs: Example Usage</title>
+
+  <link rel="stylesheet" href="/prism.css">
+  <script src="/prism.js"></script>
+
+  <link rel="stylesheet" href="/styles/util.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="side-nav">
+
+    <a href="/docs/api" class="side-content side-link">API Reference</a>
+    <a href="/docs/" class="side-content side-link">Welcome</a>
+
+  </div>
+
+  <main>
+
+    <div class="pages">
+      <a href="/" class="page bi-house-door-fill"></a> <i class="bi-chevron-right"></i> <span class="docs-chip">Examples</span>
+    </div>
+
+    <h1 class="docs-title">Example Usage</h1>
+    <p class="docs-brief">Get some ideas on where to use PopifyJS</p>
+
+    <p class="docs-note info"><i class="bi-info-circle"></i> All the functions used here are listed in the API Reference if you want a detailed explanation on the process.</p>
+  
+    <br>
+
+    <p class="docs-brief">First, Connect to the required resources</p>
+    <pre class="language-html"><code class="language-html">&lt;script src="https://popifyjs.github.io/src/script.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://popifyjs.github.io/src/style.css"&gt;</code></pre>
+
+    <h2 class="docs-sub">Example #1</h2>
+    <p class="docs-brief">Case: using the popup in a delete situation... (on delete button click, the popup activates)</p>
+
+    <pre class="language-html"><code class="language-html">&lt;button class="delete-btn"&gt;Delete Something&lt;/button&gt;</code></pre>
+
+    <pre class="language-javascript"><code class="language-javascript">const deleteBtn = document.querySelector(".delete-btn");
+
+deleteBtn.addEventListener("click", () => {
+  
+  popify({
+    headerContent: "Confirm Delete",
+    subText: "are you sure you want to delete this thing?",
+    overlay: true,
+    short: true,
+    closeOnEscape: true,
+    icon: "error",
+    closeIcon: true,
+    buttons: [
+      {
+        text: "Cancel",
+        icon: "x lg",
+        closePopup: true,
+        run: () => {
+          alert("Cancelled delete!");
+        }
+      },
+      {
+        text: "Delete",
+        icon: "trash",
+        type: "error",
+        closePopup: true,
+        run: () => {
+          // do the delete function to delete the thing.
+          alert("Deleted!");
+        }
+      }
+    ]
+  });
+
+});</code></pre>
+
+  <p class="docs-note info"><i class="bi-code"></i> <a href="https://codepen.io/chill31-the-looper/pen/jOKXwZG" class="quick-link">Check the Codepen example here</a></p>
+
+  <span class="separator"></span>
+
+  <p class="docs-note info"><i class="bi-play"></i><span>Try it yourself [no coding] in the <a href="/" class="quick-link">PopifyJS Playground</a></span></p>
+
+  </main>
+
+  <script src="/scripts/util.js"></script>
+</body>
+</html>

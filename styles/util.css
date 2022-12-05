@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=JetBrains+Mono:wght@200&family=Ubuntu+Mono&display=swap');
+
+:root {
+  --second: #1b1b1d;
+  --main: #4cacdc;
+  --color: white;
+  --hero-color: #000000;
+  --menu-main: #242526;
+  --selection-color: rgba(90, 192, 255, 0.855);
+}
+
+* {
+  transition: 350ms ease;
+  transition-property: background-color, color;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+pre * {
+  font-family: "Ubuntu Mono";
+}
+
+body, header, section, main {
+  overflow-x: hidden !important;
+}
+
+::selection {
+  background-color: var(--selection-color);
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color)
+}
+
+a:hover {
+  color: var(--main);
+}
+
+header {
+  background-color: var(--menu-main);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-button i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color);
+}
+
+.left-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title:hover * {
+  color: var(--main);
+}
+
+.head-logo {
+  font-size: 2rem;
+}
+
+.head-title {
+  font-size: 1rem;
+  color: var(--color);
+  font-weight: 700;
+}
+
+.right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-content:where(:hover, :focus, :focus-within) * {
+  color: var(--main);
+}
+
+.switch-theme {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+  .menu-button {
+    display: inherit;
+  }
+
+  .redirect-github {
+    display: none;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .docs-note {
+    max-width: 95vw !important;
+  }
+
+}
+
+.menu-main {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 250ms ease-in !important;
+  transition-property: opacity, transform !important;
+  background-color: rgba(0,0,0,.6);
+}
+
+.menu {
+  height: 100vh;
+  width: 80vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  background-color: var(--menu-main);
+  padding: .8rem;
+}
+
+.menu-main.load {
+  transform: inherit;
+  opacity: 1;
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8rem;
+  width: 100%;
+  border-bottom: solid 3px gray;
+}
+
+.sidebar-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.close-sidebar {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: .5rem;
+}
+
+.main-content {
+  margin-top: 2rem;
+  padding: .8rem;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-content .sidebar-content {
+  padding: .7rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  color: var(--color);
+}
+
+body .main-content .sidebar-content:where(:hover, :focus) {
+  background-color: rgb(67, 67, 67);
+  color: var(--main);
+}
+
+.sidebar-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-details summary {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.sidebar-details summary::before {
+  content: "\f231";
+  font-family: "Bootstrap-icons";
+  transition: transform 250ms ease;
+}
+.sidebar-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.pages {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.pages i[class*="bi-chevron"] {
+  color: rgb(189, 189, 189);
+}
+
+.quick-link {
+  color: var(--main);
+}
+
+.quick-link:where(:hover, :active, :focus) {
+  text-decoration: underline;
+}
+
+:root {
+  --padding-dir: 8.5rem;
+  --padding-dirx: 1.5rem;
+}
+
+.topic {
+  border: solid 1px lightgray;
+  border-radius: .5rem;
+  margin-top: 3rem;
+  transition: border 250ms ease;
+}
+
+.topic.next {
+  padding: 1rem var(--padding-dirx) 1rem var(--padding-dir);
+  align-self: flex-end;
+}
+
+.topic.previous {
+  padding: 1rem var(--padding-dir) 1rem var(--padding-dirx);
+  align-self: flex-start;
+}
+
+.topic:where(:hover, :focus) {
+  border: solid 1px var(--main);
+}
+
+.topic .nav-tell {
+  margin-bottom: .5rem;
+  min-width: max-content;
+}
+
+.topic .name {
+  min-width: max-content;
+  color: var(--main);
+  font-size: 1rem;
+}
+
+.name i {
+  color: var(--main) !important;
+}
+
+.docs-chip {
+  background-color: var(--main);
+  color: var(--hero-color);
+  padding: .5rem 1rem;
+  border-radius: 200px;
+  margin-top: 2rem;
+}
+
+[class*="language-"] {
+  border-radius: .5rem;
+  width: 90%;
+  max-width: 85vw;
+}
+
+code {
+  background-color: #2d2d2d;
+  font-family: "Ubuntu Mono";
+  padding: .25rem;
+  border-radius: .2rem;
+  color: white;
+}
+
+.docs-note {
+  max-width: 65vw;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: .25rem;
+}
+
+.docs-note i {
+  font-size: 2rem;
+}
+
+.docs-note.info {
+  border: solid 2px var(--main);
+}
+
+.docs-note.error {
+  border: solid 2px rgb(255, 119, 119);
+}

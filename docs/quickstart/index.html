@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs: Quickstart</title>
+
+  <link rel="stylesheet" href="/prism.css">
+  <script src="/prism.js"></script>
+
+  <link rel="stylesheet" href="/styles/util.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="side-nav">
+
+    <a href="/docs/api" class="side-content side-link">API Reference</a>
+    <a href="/docs/" class="side-content side-link">Welcome</a>
+
+  </div>
+
+  <main>
+
+    <div class="pages">
+      <a href="/" class="page bi-house-door-fill"></a> <i class="bi-chevron-right"></i> <span class="docs-chip">Quickstart</span>
+    </div>
+
+    <h1 class="docs-title">Quickstart</h1>
+    <p class="docs-brief">Get started on putting a popup using PopifyJS here</p>
+
+    <p class="docs-note error"><i class="bi-exclamation-triangle"></i> This page only contains the starter code for using PopifyJS. For full information on the library, visit the API Reference.</p>
+  
+    <br>
+
+    <p class="docs-brief">Firstly, to actually import the library, you need to put the code given below in your html file:</p>
+    <pre class="language-html"><code class="language-html">&lt;script src="https://popifyjs.github.io/src/script.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://popifyjs.github.io/src/style.css"&gt;</code></pre>
+
+    <p class="docs-brief">Now, to make a popup, simply use the <code>popify(...)</code> function</p>
+
+    <pre class="language-javascript"><code class="language-javascript">popify({
+  overlay: true,
+  closeOnBackground: true,
+  closeOnEscape: true,
+  short: true,
+  icon: "popup icon",
+  closeIcon: true,
+  headerContent: "Popup Header",
+  subText: "this is the sub text of the popup",
+  
+  buttons: [
+    {
+      text: "Button 1",
+      closePopup: true,
+      class: "button-class",
+      icon: "button icon",
+      type: 'none',
+      run: () => {
+        console.log("First button clicked");
+      }
+    },
+    {
+      text: "Button 2",
+      closePopup: true,
+      class: "button2-class",
+      icon: "button icon",
+      type: 'none',
+      run: () => {
+        console.log("Second button clicked");
+      }
+    }
+  ]
+});</code></pre>
+
+    <p class="docs-note info"><i class="bi-person-circle"></i> This code has all the current PopifyJS functions and methods. Learn more through the API Reference.<br> You can test all of this through the PopifyJS Playground [home page]</p>
+
+  </main>
+
+  <script src="/scripts/util.js"></script>
+</body>
+</html>

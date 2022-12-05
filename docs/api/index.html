@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs: API Reference</title>
+
+  <link rel="stylesheet" href="/prism.css">
+  <script src="/prism.js"></script>
+
+  <link rel="stylesheet" href="/styles/util.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="side-nav">
+
+    <a href="#" class="side-content side-link">API Reference</a>
+
+    <a href="/docs" class="side-content side-link">Welcome</a>
+
+  </div>
+
+  <main>
+
+    <div class="pages">
+      <a href="/" class="page bi-house-door-fill"></a> <i class="bi-chevron-right"></i> <span class="docs-chip">API</span>
+    </div>
+
+    <h1 class="docs-title">API Reference</h1>
+
+    <p class="docs-note info"><i class="bi-info-circle"></i>If you are not aware of the starter code to use PopifyJS, go to the main docs page and from there, the quickstart page.</p>
+
+    <p class="docs-note info"><i class="bi-info-circle"></i><span>All options in the <code>popify(...)</code> function are optional. You need not write out any unecessary option if your popup does not need it.</span></p>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="headerContent">
+      <a href="#headerContent" class="docs-sub">headerContent</a>
+
+      <p class="docs-brief">this is a parameter in the <code>popify()</code> function. It is used to set the textContent of the popup's header/title.<br><code>[String]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  headerContent: "Popup Title",
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="subText">
+      <a href="#subText" class="docs-sub">subText</a>
+
+      <p class="docs-brief">this is a parameter in the <code>popify()</code> function. It is used to set the sub text of the popup.<br><code>[String]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  subText: "some brief description you want to give in the popup",
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="overlay">
+      <a href="#overlay" class="docs-sub">Overlay</a>
+
+      <p class="docs-brief">this is a parameter in the <code>popify()</code> function. It specifies whether an overlay should be present behind the opup or not.<br><code>[Boolean]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  overlay: true,
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="closeOnBackground">
+      <a href="#closeOnBackground" class="docs-sub">closeOnBackground</a>
+
+      <p class="docs-brief">This is a parameter in the <code>popify()</code> function and it specifies whether the popup should close when the background/overlay is clicked.<br><code>[Boolean]</code></p>
+
+      <pre class="langauge-javascript"><code class="language-javascript">popify({
+  closeOnBackground: false,
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="closeOnEscape">
+      <a href="#closeOnEscape" class="docs-sub">closeOnEscape</a>
+
+      <p class="docs-brief">This is the parameter in the <code>popify()</code> function which is used to specify whether the popup should be closed on <code>[Escape]</code> key press or not.<br><code>[Boolean]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  closeOnEscape: true,
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="short">
+      <a href="#short" class="docs-sub">short</a>
+
+      <p class="docs-brief">This parameter in the <code>popify()</code> function is used to specify whether the popup's size should be large or small. [responsive in both options]<br><code>[Boolean]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  short: false,
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="icon">
+      <a href="#icon" class="docs-sub">icon</a>
+
+      <p class="docs-brief">This parameter in the <code>popify()</code> function puts an icon in the popup if given.<br><code>[String - {Options}]</code></p>
+
+      <p class="docs-brief listed">The options for the popup icons are: 
+        <ul>
+          <li><code>Success</code></li>
+          <li><code>Error</code></li>
+          <li><code>Warning</code></li>
+          <li><code>Info</code></li>
+          <li><code>Question</code></li>
+        </ul>
+      </p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  icon: "error", // should be lowercase
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="closeIcon">
+      <a href="#closeIcon" class="docs-sub">closeIcon</a>
+
+      <p class="docs-brief">This parameter in the <code>popify()</code> function specifies if you want a close icon in the popup or not.<br><code>[Boolean]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  closeIcon: true,
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div">
+      <a class="docs-sub">Buttons</a>
+
+      <p class="docs-brief">There is one more parameter in the <code>popify()</code> function. It is something like this:<br><code>[Array - {Object}]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      ...
+    },
+    {
+      ...
+    }
+  ],
+  ...
+});</code></pre>
+
+      <p class="docs-note info"><i class="bi-person-circle"></i> The buttons parameter is initially an array, which contains objects containing parameters which set the button's functions and stles. The array can contain as many button objects but you need to be careful on how it shows up in the popup.</p>
+
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_text">
+      <a href="#button_text" class="docs-sub">text</a>
+
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. This sets the button's text<br><code>[String]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      text: "button text you want",
+      ...
+    }
+  ],
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_closePopup">
+      <a href="#button_closePopup" class="docs-sub">closePopup</a>
+
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. This specifies whether the popup should close when the specific button is clicked or should remain open.<br><code>[Boolean]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      closePopup: true, // can be false
+      ...
+    }
+  ],
+  ...
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_class">
+      <a href="#button_class" class="docs-sub">class</a>
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. This gives an extra custom class to the button if specified in the parameter.<br><code>[String]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      "class": "custom-class-you-want-to-give-to-button" // make sure there are no spaces.
+    }
+  ],
+  ...
+});</code></pre>
+
+      <p class="docs-note error"><i class="bi-exclamation-triangle"></i><span> Make sure that the "class" parameter is in quotes, because <code>class</code> is an existing javascript keyword and it will result in an error otherwise.</span></p>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_icon">
+      <a href="#button_icon" class="docs-sub">icon</a>
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. This sets the button's icon if specified.<br><code>[String - Bootstrap Icon]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      icon: "trash" // this is a valid Bootstrap icon name.
+    }
+  ],
+  ...
+});</code></pre>
+
+      <p class="docs-note info"><i class="bi-info-circle"></i><span>For seeing all the available icons in Bootstrap, visit <a class="quick-link" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>. The naming system should be all lowercase. For example: <code>icon: "arrow down circle"</code></span></p>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_type">
+      <a href="#button_type" class="docs-sub">type</a>
+
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. This specifies the button type [optional, as all the parameters]. It is basically a way to change colors of the buttons without you using any extra style.<br><code>[String - {type}]</code></p>
+
+      <p class="docs-brief listed">The types are:
+        <ul>
+          <li><code>error</code></li>
+          <li><code>success</code></li>
+          <li><code>warning</code></li>
+          <li><code>info</code></li>
+        </ul>
+      </p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      type: "warning" // any of the given 4 types work here. only lowercase.
+    }
+  ]
+});</code></pre>
+    </div>
+
+    <span class="separator"></span>
+
+    <div class="reference-div" id="button_run">
+      <a href="#button_run" class="docs-sub">run</a>
+
+      <p class="docs-brief">This is a parameter in the object of <code>buttons</code> array. It should be a function which runs when the button is clicked.<br><code>[Function]</code></p>
+
+      <pre class="language-javascript"><code class="language-javascript">popify({
+  buttons: [
+    {
+      run: () => {
+        alert("Button Clicked!"); // this runs when the button is clicked.
+      }
+    }
+  ]
+});</code></pre>
+
+      <p class="docs-note info"><i class="bi-person-circle"></i> This can also be a variable which stores a function, rather than a function in the parameter itself.</p>
+    </div>
+
+    <span class="separator"></span>
+
+  </main>
+
+  <script src="/scripts/util.js"></script>
+</body>
+</html>
