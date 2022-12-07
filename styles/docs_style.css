@@ -79,6 +79,7 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
   padding: .7rem;
+  padding-bottom: 5rem;
 }
 
 @media (max-width: 1000px) {
@@ -103,4 +104,46 @@ main {
 
 .quickstart-para {
   margin-bottom: 1.5rem;
+}
+
+.main-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.sub-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.item-image {
+  height: 10rem;
+}
+
+.item-brief {
+  max-width: 25rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+
+  .sub-flex {
+    flex-direction: column;
+  }
+
 }
