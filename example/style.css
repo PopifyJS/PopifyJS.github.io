@@ -7,7 +7,6 @@
 body {
   background-color: rgb(40, 45, 62);
   overflow-x: hidden;
-  font-family: system-ui;
 }
 
 ::selection {
@@ -89,7 +88,6 @@ button.docs {
   width: 50%;
   padding: .5em;
   outline: none !important;
-  font-family: system-ui;
 }
 
  /* The switch - the box around the slider */
